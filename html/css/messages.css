@@ -1,0 +1,62 @@
+.box .content.messages {
+	padding : 10px 20px 20px;
+	*padding: 20px 20px 20px;
+}
+
+.box .messages{
+	*zoom : 1;
+}
+
+.box .content .message {
+	position : relative;
+	display : inline-block;
+	background-position : 8px 10px;
+	background-repeat : no-repeat;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	margin : 10px 0 0;
+	padding : 0 0 0 25px;
+	line-height : 2.3em;
+	font-weight : bold;
+	clear : both;
+}
+
+.box .content .message img {
+	position : absolute;
+	top : 7px;
+	right : 7px;
+	cursor : pointer;
+}
+
+.box .content .red {
+	display : block;
+	background-image : url(/gfx/icon-reddot.gif);
+	background-color : #fbf0f0;
+	border : 1px solid #b80000;
+	color : #b80000;
+}
+
+.box .content .green {
+	display : block;
+	background-image : url(/gfx/icon-greendot.gif);
+	background-color : #f6faf0;
+	border : 1px solid #6aa500;
+	color : #6aa500;
+}
+
+.box .content .blue {
+	display : block;
+	background-image : url(/gfx/icon-bluedot.gif);
+	background-color : #f1f6fc;
+	border : 1px solid #136bc5;
+	color : #136bc5;
+}
+
+.box .content .orange {
+	display : block;
+	background-image : url(/gfx/icon-orangedot.gif);
+	background-color : #fef9f1;
+	border : 1px solid #ed9d12;
+	color : #ed9d12;
+}

@@ -1,0 +1,701 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+ 
+<head> 
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+	<title>{% block title %}Мониторинг zakupki.gov.ru{%endblock%}</title> 
+	
+	<style type="text/css"> 
+		@import url('/css/style.css');
+		@import url('/css/style_text.css');
+		@import url('/css/c-blue.css'); /* COLOR FILE CAN CHANGE TO c-blue.ccs, c-grey.ccs, c-orange.ccs, c-purple.ccs or c-red.ccs */ 
+		@import url('/css/datepicker.css');
+		@import url('/css/form.css');
+		@import url('/css/menu.css');
+		@import url('/css/messages.css');
+		@import url('/css/statics.css');
+		@import url('/css/tabs.css');
+		@import url('/css/wysiwyg.css');
+		@import url('/css/wysiwyg.modal.css');
+		@import url('/css/wysiwyg-editor.css');
+	</style> 
+	
+	<script type="text/javascript" src="/js/jquery-1.5.2.min.js"></script> 
+ 
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="/js/excanvas.min.js"></script>
+	<![endif]--> 
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	{% block addhead %}
+	{% endblock %}
+	
+</head> 
+ 
+<body> 
+ 
+<div class="wrapper"> 
+	<div class="container"> 
+ 
+		<!--[if !IE]> START TOP <![endif]-->  
+		<div class="top"> 
+			<div class="split"><h1>Мониторинг Zakupki.gov.ru</h1></div> 
+			<div class="split">
+				<div>Мониторим добро во имя добра.</div>
+			</div> 
+			{% comment %}
+			<div class="split">
+				<div class="logout"><img src="/gfx/icon-logout.gif" align="left" alt="Logout" /> <a href="#">Logout</a></div> 
+				<div><img src="/gfx/icon-welcome.gif" align="left" alt="Welcome" /> Welcome First, lastname</div> 
+			</div> 
+			{% endcomment %}
+		</div> 
+		<!--[if !IE]> END TOP <![endif]-->  
+		
+		<!--[if !IE]> START MENU <![endif]-->  
+		<div class="menu"> 
+			<ul> 
+				<li class="current"><a href="/">Главная</a></li> 
+				<li class="break"></li> 
+				<li> 
+					<a href="/indicators/">Индикаторы</a> 
+				</li> 
+				<li class="break"></li> 
+				<li><a href="/about/">О проекте</a></li> 
+				<li class="break"></li> 
+			</ul> 
+			{% comment %}
+			<div class="search"> 
+				<form action="" method="post"> 
+					<input type="text" value="" /> 
+					<button type="submit"><span>Search</span></button> 
+				</form> 
+			</div> 
+			{% endcomment %}
+		</div> 
+		<!--[if !IE]> END MENU <![endif]-->  
+		
+		<!--[if !IE]> STARTHOLDER <![endif]--> 
+		<div class="holder"> 
+		{% block content %}
+		
+			<!--[if !IE]> START STATICS <![endif]--> 
+			<div class="box big"> 
+				<div class="title"> 
+					<h2>Statistics</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<div id="caption">Statics for April</div> 
+					<table class="statics"> 
+						<thead> 
+							<tr> 
+								<th></th> 
+								<th class="line">unique visitors</th> 
+								<th>pageviews</th> 
+							</tr> 
+						</thead> 
+						<tbody> 
+							<tr> 
+								<th>0</th><td>0</td><td>0</td> 
+							</tr> 
+							<tr> 
+								<th>1</th><td>10</td><td>55</td> 
+							</tr> 
+							<tr> 
+								<th>2</th><td>30</td><td>110</td> 
+							</tr> 
+							<tr> 
+								<th>3</th><td>50</td><td>165</td> 
+							</tr> 
+							<tr> 
+								<th>4</th><td>70</td><td>220</td> 
+							</tr> 
+							<tr> 
+								<th>5</th><td>90</td><td>270</td> 
+							</tr> 
+							<tr> 
+								<th>6</th><td>110</td><td>320</td> 
+							</tr> 
+							<tr> 
+								<th>7</th><td>130</td><td>370</td> 
+							</tr> 
+							<tr> 
+								<th>8</th><td>150</td><td>420</td> 
+							</tr> 
+							<tr> 
+								<th>9</th><td>170</td><td>470</td> 
+							</tr> 
+							<tr> 
+								<th>10</th><td>170</td><td>470</td> 
+							</tr> 
+							<tr> 
+								<th>11</th><td>190</td><td>520</td> 
+							</tr> 
+							<tr> 
+								<th>12</th><td>210</td><td>570</td> 
+							</tr> 
+							<tr> 
+								<th>13</th><td>230</td><td>620</td> 
+							</tr> 
+							<tr> 
+								<th>14</th><td>250</td><td>770</td> 
+							</tr> 
+							<tr> 
+								<th>15</th><td>290</td><td>790</td> 
+							</tr> 
+							<tr> 
+								<th>16</th><td>250</td><td>770</td> 
+							</tr> 
+							<tr> 
+								<th>17</th><td>230</td><td>620</td> 
+							</tr> 
+							<tr> 
+								<th>18</th><td>210</td><td>570</td> 
+							</tr> 
+							<tr> 
+								<th>19</th><td>190</td><td>520</td> 
+							</tr> 
+							<tr> 
+								<th>20</th><td>170</td><td>470</td> 
+							</tr> 
+							<tr> 
+								<th>21</th><td>210</td><td>420</td> 
+							</tr> 
+							<tr> 
+								<th>22</th><td>230</td><td>440</td> 
+							</tr> 
+							<tr> 
+								<th>23</th><td>260</td><td>460</td> 
+							</tr> 
+							<tr> 
+								<th>24</th><td>290</td><td>480</td> 
+							</tr> 
+							<tr> 
+								<th>25</th><td>315</td><td>500</td> 
+							</tr> 
+							<tr> 
+								<th>26</th><td>340</td><td>520</td> 
+							</tr> 
+							<tr> 
+								<th>27</th><td>300</td><td>540</td> 
+							</tr> 
+							<tr> 
+								<th>28</th><td>280</td><td>560</td> 
+							</tr> 
+							<tr> 
+								<th>29</th><td>270</td><td>580</td> 
+							</tr> 
+							<tr> 
+								<th>30</th><td>270</td><td>580</td> 
+							</tr> 
+						</tbody> 
+					</table> 
+				</div> 
+			</div> 
+			<!--[if !IE]> END STATICS <![endif]-->  
+		
+			<!--[if !IE]> START USER MESSAGES <![endif]--> 
+			<div class="box small"> 
+				<div class="title"> 
+					<h2>User Messages</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<ul class="user"> 
+						<li> 
+							<h3>Suspendisse ac ligula</h3> 
+							Sed placerat, mauris ac malesu
+							dictum, dolor metus luctus.
+						</li> 
+						<li> 
+							<h3>Praesent venenatis neque</h3> 
+							Quisque eget neque turp congu
+							urna. Mauris aliquet pharetra.
+						</li> 
+						<li> 
+							<h3>Cras sit amet fringilla</h3> 
+							Duis dictum erat nec mauris fer
+							mentum bibendum.
+						</li> 
+					</ul> 
+				</div> 
+			</div> 
+			<!--[if !IE]> END USER MESSAGES <![endif]-->  
+		
+			<!--[if !IE]> START SYSTEM MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>System messages</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content messages"> 
+				
+					<div class="message red"> 
+						Sorry, there was an error saving the file.
+						<img src="/gfx/icon-close.gif" alt="Close this item" /> 
+					</div> 
+ 
+					<div class="message green"> 
+						There is a successful file transfer.
+						<img src="/gfx/icon-close.gif" alt="Close this item" /> 
+					</div> 
+ 
+					<div class="message blue"> 
+						Do you want some information about the file?
+						<img src="/gfx/icon-close.gif" alt="Close this item" /> 
+					</div> 
+ 
+					<div class="message orange"> 
+						Warning: Your file seems to be invalid.
+						<img src="/gfx/icon-close.gif" alt="Close this item" /> 
+					</div> 
+				
+				</div> 
+			</div> 
+			<!--[if !IE]> END SYSTEM MESSAGES <![endif]-->  
+		
+			<!--[if !IE]> START PAGES MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Pages</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content pages"> 
+				
+					<table> 
+						<thead> 
+							<tr> 
+								<td><input type="checkbox" class="checkall" /></td> 
+								<td>Title</td> 
+								<td>Status</td> 
+								<td>Date created</td> 
+								<td>Author</td> 
+								<td></td> 
+							</tr>	
+						</thead> 
+						<tbody> 
+							<tr class="grey"> 
+								<td><input type="checkbox" /></td> 
+								<td><a href="#">Sed dictum nisi sodales</a></td> 
+								<td>Draft</td> 
+								<td>26th April 2011</td> 
+								<td>First, Lastname</td> 
+								<td> 
+									<a href="#"><img src="/gfx/icon-edit.png" alt="Edit this item" /></a> 
+									<a href="#"><img src="/gfx/icon-delete.png" alt="Delete this item" /></a> 
+								</td> 
+							</tr> 
+							<tr> 
+								<td><input type="checkbox" /></td> 
+								<td><a href="#">Duis iaculis velit auctor magna ornare</a></td> 
+								<td>Published</td> 
+								<td>25th April 2011</td> 
+								<td>First, Lastname</td> 
+								<td> 
+									<a href="#"><img src="/gfx/icon-edit.png" alt="Edit this item" /></a> 
+									<a href="#"><img src="/gfx/icon-delete.png" alt="Delete this item" /></a> 
+								</td> 
+							</tr> 
+							<tr> 
+								<td><input type="checkbox" /></td> 
+								<td><a href="#">Pellentesque erat sapien</a></td> 
+								<td>Draft</td> 
+								<td>23th April 2011</td> 
+								<td>First, Lastname</td> 
+								<td> 
+									<a href="#"><img src="/gfx/icon-edit.png" alt="Edit this item" /></a> 
+									<a href="#"><img src="/gfx/icon-delete.png" alt="Delete this item" /></a> 
+								</td> 
+							</tr> 
+							<tr> 
+								<td><input type="checkbox" /></td> 
+								<td><a href="#">Vestibulum ante ipsum primis in faucibus</a></td> 
+								<td>Published</td> 
+								<td>22th April 2011</td> 
+								<td>First, Lastname</td> 
+								<td> 
+									<a href="#"><img src="/gfx/icon-edit.png" alt="Edit this item" /></a> 
+									<a href="#"><img src="/gfx/icon-delete.png" alt="Delete this item" /></a> 
+								</td> 
+							</tr> 
+							<tr> 
+								<td><input type="checkbox" /></td> 
+								<td><a href="#">Mauris commodo sapien ac nibh</a></td> 
+								<td>Published</td> 
+								<td>21th April 2011</td> 
+								<td>First, Lastname</td> 
+								<td> 
+									<a href="#"><img src="/gfx/icon-edit.png" alt="Edit this item" /></a> 
+									<a href="#"><img src="/gfx/icon-delete.png" alt="Delete this item" /></a> 
+								</td> 
+							</tr> 
+						</tbody> 
+					</table> 
+				
+					<div class="pages-bottom"> 
+						<div class="actionbox"> 
+							<form action="" method="post"> 
+								<select class="action"> 
+									<option>Actions</option> 
+									<option>Delete</option> 
+									<option>Edit</option> 
+								</select> 
+								<button type="submit"><span>apply</span></button> 
+							</form> 
+						</div> 
+						
+						<div class="pagination"> 
+							<a href="#" class="left"></a> 
+							<a href="#" class="active">1</a> 
+							<a href="#">2</a> 
+							<a href="#">3</a> 
+							<a href="#">4</a> 
+							<a href="#">5</a> 
+							<a href="#">6</a> 
+							<a href="#">7</a> 
+							<a href="#" class="right"></a> 
+						</div> 
+					</div> 
+				
+				</div> 
+			</div> 
+			<!--[if !IE]> END PAGES <![endif]-->  
+		
+			<!--[if !IE]> START FORMS <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Forms</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content forms"> 
+				
+					<div class="message red"> 
+						An error message if something is going wrong.
+						<img src="/gfx/icon-close.gif" alt="Close this item" /> 
+					</div> 
+				
+					<form action="" method="post"> 
+						<div class="row"> 
+							<label>A small size input:</label> 
+							<input type="text" value="" class="small" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A medium size input:</label> 
+							<input type="text" value="" class="medium" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A big size input:</label> 
+							<input type="text" value="" class="big" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A full size input:</label> 
+							<input type="text" value="" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A selectbox:</label> 
+							<select> 
+								<option value="opt1">Option 1</option> 
+								<option value="opt2">Option 2</option> 
+								<option value="opt3">Option 3</option> 
+								<option value="opt4">Option 4</option> 
+								<option value="opt5">Option 5</option> 
+							</select> 
+						</div> 
+						
+						<div class="row"> 
+							<label>File upload:</label> 
+							<input class="file_1" type="file" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>Date:</label> 
+							<span class="date">Starting date</span> <input type="text" class="datepicker" /> 
+							<span class="date">Ending date</span> <input type="text" class="datepicker" /> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A full size textarea:</label> 
+							<textarea cols="" rows=""></textarea> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A checkbox</label> 
+							<input type="checkbox" class="checkbox" checked="checked" name="ckbox" /> <span>Checkbox on</span> 
+							<input type="checkbox" class="checkbox" name="ckbox" /> <span>Checkbox off</span> 
+						</div> 
+						
+						<div class="row"> 
+							<label>A radiobutton</label> 
+							<input type="radio" class="radio" checked="checked" name="question" value="on" /> <span>Radiobutton on</span> 
+							<input type="radio" class="radio" name="question" value="off" /> <span>Radiobutton off</span> 
+						</div> 
+						
+						<div class="row-wysiwyg"> 
+							<label>A WYSIWYG editor:</label> 
+							<textarea id="wysiwyg" cols="" rows=""></textarea> 
+						</div> 
+						
+						<div class="row buttons"> 
+							<button type="submit"><span>Button</span></button> 
+							<button type="submit"><span>Button medium</span></button> 
+							<button type="submit"><span>Button extra large</span></button> 
+						</div> 
+					</form> 
+					
+				</div> 
+			</div> 
+			<!--[if !IE]> END FORMS <![endif]-->  
+		
+			<!--[if !IE]> START LEFT BOX <![endif]--> 
+			<div class="box medium"> 
+				<div class="title"> 
+					<h2>Left box</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content thumbs"> 
+				
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-1.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-2.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-3.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-4.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-5.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-6.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-7.jpg" alt="" /> 
+					</div> 
+					
+					<div class="thumb"> 
+						<div><a href="#"></a></div> 
+						<img src="/gfx/photo/photo-8.jpg" alt="" /> 
+					</div> 
+					
+				</div> 
+			</div> 
+			<!--[if !IE]> END LEFT BOX <![endif]-->  
+		
+			<!--[if !IE]> START RIGHT BOX <![endif]--> 
+			<div class="box medium"> 
+				<div class="title"> 
+					<h2>Right box</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content tabs"> 
+					<ul class="tabnav"> 
+						<li><a href="#tab1">Tab number 001</a></li> 
+						<li><a href="#tab2">Tab number 002</a></li> 
+						<li><a href="#tab3">Tab number 003</a></li> 
+					</ul> 
+					
+					<div id="tab1" class="tabdiv"> 
+						<table> 
+							<tr> 
+								<td> 
+									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incept
+									himenaeos. Mauris ultricies laoreet felis in rhoncus. Sed egestas lorem ferm
+									entum felis lacinia molestie. Pellentesque lobortis turpis nunc. Nam nec
+									adipiscing magna.<br /> 
+									<br /> 
+									Donec pretium vulputate diam, nec feugiat nunc posuere a. Ut ac imperdiet
+									augue. Praesent vitae augue ante, id tempor tortor. In dignissim tellus in
+									metus interdum in luctus sapien lobortis. In sed commodo ante. Cras a
+									scelerisque erat. Proin eget suscipit lacus. Suspendisse tincidunt, ante vitae
+									scelerisque cursus, risus lacus malesuada purus.
+								</td> 
+							</tr> 
+						</table> 
+					</div> 
+					
+					<div id="tab2" class="tabdiv"> 
+						<table> 
+							<tr> 
+								<td> 
+									<img src="/gfx/photo/photo-2.jpg" class="thumb" align="right" alt="" /> 
+									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incept
+									himenaeos. Mauris ultricies laoreet felis in rhoncus. Sed egestas lorem ferm
+									entum felis lacinia molestie. Pellentesque lobortis turpis nunc. Nam nec
+									adipiscing magna.<br /> 
+									<br /> 
+									Donec pretium vulputate diam, nec feugiat nunc posuere a. Ut ac imperdiet
+									augue. Praesent vitae augue ante, id tempor tortor. In dignissim tellus in
+									metus interdum in luctus sapien lobortis. In sed commodo ante. Cras a
+									scelerisque erat. Proin eget suscipit lacus.
+								</td> 
+							</tr> 
+						</table> 
+					</div> 
+					
+					<div id="tab3" class="tabdiv"> 
+						<table> 
+							<tr> 
+								<td> 
+									<img src="/gfx/photo/photo-5.jpg" class="thumb" align="right" alt="" /> 
+									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incept
+									himenaeos. Mauris ultricies laoreet felis in rhoncus. Sed egestas lorem ferm
+									entum felis lacinia molestie. Pellentesque lobortis turpis nunc. Nam nec
+									adipiscing magna.<br /> 
+									<br /> 
+									Donec pretium vulputate diam, nec feugiat nunc posuere a. Ut ac imperdiet
+									augue. Praesent vitae augue ante, id tempor tortor. In dignissim tellus in
+									metus interdum in luctus sapien lobortis. In sed commodo ante. Cras a
+									scelerisque erat. Proin eget suscipit lacus.
+								</td> 
+							</tr> 
+						</table> 
+					</div> 
+				</div> 
+			</div> 
+			<!--[if !IE]> END RIGHT BOX <![endif]--> 
+			
+			<!--[if !IE]> START TEXT BOX <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Text box</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<h1>First Heading</h1> 
+					Duis vel arcu nisl, pretium fringilla massa. Integer aliquam sollicitudin ipsum, non euismod neque faucibus id.
+					Pellentesque nec nisl et nulla vehicula rutrum et quis ipsum. Suspendisse potenti. Etiam sit amet justo sagittis sem
+					tincidunt pellentesque. Donec turpis risus, mattis sed adipiscing eu, semper luctus magna.<br /> 
+					<br /> 
+					<h2>Second heading</h2> 
+					Duis vel arcu nisl, pretium fringilla massa. Integer aliquam sollicitudin ipsum, non euismod neque faucibus id.
+					Pellentesque nec nisl et nulla vehicula rutrum et quis ipsum. Suspendisse potenti. Etiam sit amet justo sagittis sem
+					tincidunt pellentesque. Donec turpis risus, mattis sed adipiscing eu, semper luctus magna.
+					
+					<ul> 
+						<li>Morbi porttitor risus a nulla vestibulum vulputate.</li> 
+						<li>Curabitur vestibulum condimentum arcu non.</li> 
+						<li>Vestibulum mollis rutrum diam nec euismod.</li> 
+						<li>Aenean feugiat vestibulum congue donec nibh nulla, ullamcorper.</li> 
+						<li>Proin nec nulla justo suspendisse ac magna et libero scelerisque.</li> 
+					</ul> 
+					<br /> 
+					<h3>Third heading</h3> 
+					Duis vel arcu nisl, pretium fringilla massa. Integer aliquam sollicitudin ipsum, non euismod neque faucibus id.
+					Pellentesque nec nisl et nulla vehicula rutrum et quis ipsum. Suspendisse potenti. Etiam sit amet justo sagittis sem
+					tincidunt pellentesque. Donec turpis risus, mattis sed adipiscing eu, semper luctus magna.
+					
+					<ol> 
+						<li>Morbi porttitor risus a nulla vestibulum vulputate.</li> 
+						<li>Curabitur vestibulum condimentum arcu non.</li> 
+						<li>Vestibulum mollis rutrum diam nec euismod.</li> 
+						<li>Aenean feugiat vestibulum congue donec nibh nulla, ullamcorper.</li> 
+						<li>Proin nec nulla justo suspendisse ac magna et libero scelerisque.</li> 
+					</ol> 
+				</div> 
+			</div> 
+			<!--[if !IE]> END TEXT BOX <![endif]--> 
+		
+		{% endblock %}
+		</div> 
+		
+		
+		
+		<!--[if !IE]> START FOOTER <![endif]--> 
+		<div class="footer"> 
+			<div class="split">&#169; Все права защищены <a href="http://ivan.begtin.name">Иван Бегтин</a></div> 
+			{% comment %}
+			<div class="split right">Powered by <a href="#">DreamAdmin</a></div> 
+			{% endcomment %}
+		</div> 
+		<!--[if !IE]> END FOOTER <![endif]--> 
+		
+	</div> 
+</div> 
+<script type="text/javascript" src="/js/date.js"></script> 
+<script type="text/javascript" src="/js/hoverIntent.js"></script> 
+<script type="text/javascript" src="/js/jquery.datepicker.js"></script> 
+<script type="text/javascript" src="/js/jquery.filestyle.mini.js"></script> 
+<script type="text/javascript" src="/js/jquery.filestyle.mini.js"></script> 
+<script type="text/javascript" src="/js/jquery.graphtable-0.2.js"></script> 
+<script type="text/javascript" src="/js/jquery.pngFix.js"></script> 
+<script type="text/javascript" src="/js/jquery.sparkbox-select.js"></script> 
+<script type="text/javascript" src="/js/jquery.wysiwyg.js"></script> 
+<script type="text/javascript" src="/js/jquery-ui.js"></script> 
+<script type="text/javascript" src="/js/superfish.js"></script> 
+<script type="text/javascript" src="/js/supersubs.js"></script> 
+<script type="text/javascript" src="/js/plugins/wysiwyg.rmFormat.js"></script> 
+<script type="text/javascript" src="/js/controls/wysiwyg.link.js"></script> 
+<script type="text/javascript" src="/js/controls/wysiwyg.table.js"></script> 
+<script type="text/javascript" src="/js/controls/wysiwyg.image.js"></script> 
+<script type="text/javascript" src="/js/inline.js"></script> 
+
+
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=7654219&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/7654219/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter7654219 = new Ya.Metrika({id:7654219, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/7654219" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+ 
+<script type='text/javascript'>
+
+var _ues = {
+host:'sitemon.userecho.com',
+forum:'6857',
+lang:'ru',
+tab_corner_radius:10,
+tab_font_size:20,
+tab_image_hash:'0J7RgdGC0LDQstC40YLRjCDQvtGC0LfRi9Cy',
+tab_alignment:'left',
+tab_text_color:'#FFFFFF',
+tab_bg_color:'#FF0000',
+tab_hover_color:'#F45C5c'
+};
+
+(function() {
+    var _ue = document.createElement('script'); _ue.type = 'text/javascript'; _ue.async = true;
+    _ue.src = ('https:' == document.location.protocol ? 'https://s3.amazonaws.com/' : 'http://') + 'cdn.userecho.com/js/widget-1.4.gz.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(_ue, s);
+  })();
+
+</script>
+</body>  
+</html>

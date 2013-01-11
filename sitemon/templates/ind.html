@@ -1,0 +1,222 @@
+{% extends "base2cols.html" %}
+{% load timediff %}
+{% load datediff %}
+{% block addhead %}
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'День');
+        data.addColumn('number', 'Время недоступности');
+        data.addRows([
+        {% for v in object.getdays %}
+            ['{{v.theday}}', {{v.unavail_time}}],
+        {% endfor %}                
+        ]);
+
+        var chart = new google.visualization.LineChart(document.getElementById('placeholder'));
+        chart.draw(data, {width: 600, height: 300, title: 'Недоступность по индикатору, в секундах'});
+      }
+    </script>
+    {% endblock %}
+
+
+		{% block content %}
+
+
+			<!--[if !IE]> START TEXT BOX <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Индикатор: {{object.name}}</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<h1>Ссылка</h1> 
+					{{object.url|urlizetrunc:100}}
+					<br /> 
+					<h2>Описание</h2> 
+					{{object.description}}
+				</div> 
+			</div> 
+			<!--[if !IE]> END TEXT BOX <![endif]--> 
+		
+			<!--[if !IE]> START STATICS <![endif]--> 
+			<div class="box big"> 
+				<div class="title"> 
+					<h2>Графики</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<div id="caption">Статистика доступности</div> 
+					<div id="placeholder" style="width:600px;height:300px;"></div>
+					{% comment %}
+					<table class="statics"> 
+						<thead> 
+							<tr> 
+								<th></th> 
+								<th class="line">недоступность, доля от длительности суток в процентах</th> 
+							</tr> 
+						</thead> 
+						<tbody> 
+						    {% for v in object.getdays%}
+							<tr> 
+								<th>sdfsf{{v.theday.day}}</th><td>{{v.unavail_time}}</td>
+							</tr> 
+							{% endfor %}
+						</tbody> 
+					</table> 
+					{% endcomment %}
+				</div> 
+			</div> 
+			<!--[if !IE]> END STATICS <![endif]-->  
+		
+
+                        <!--[if !IE]> START DATA MESSAGES <![endif]-->
+                        <div class="box small">
+                                <div class="title">
+                                        <h2>Данные</h2>
+                                        <img src="/gfx/title-hide.gif" class="toggle" alt="" />
+                                </div>
+                                <div class="content">
+                                        <ul class="user">
+                                                <li>
+                                                        <h3>Пробы</h3>
+                                                        <span><img src="/gfx/icon-csv.gif" style="margin-right:0.5em"><a href="/export/probes/24h/?ind={{object.id}}">24 часа</a></span><br/>
+                                                        <span><img src="/gfx/icon-csv.gif" style="margin-right:0.5em"><a href="/export/probes/7d/?ind={{object.id}}">7 дней</a></span><br/>
+                                                        <span><img src="/gfx/icon-csv.gif" style="margin-right:0.5em"><a href="/export/probes/1m/?ind={{object.id}}">30 дней</a></span>
+                                                </li>
+                                                <li>
+                                                        <h3>Периоды</h3>
+                                                        <span><img src="/gfx/icon-csv.gif" style="margin-right:0.5em"><a href="/export/periods/?ind={{object.id}}">Периоды за все время</a></span><br/>
+                                                </li>
+                                                <li>
+                                                        <h3>Статистика по дням</h3>
+                                                        <span><img src="/gfx/icon-csv.gif" style="margin-right:0.5em"><a href="/export/days/?ind={{object.id}}">Доступность за всё время</a></span><br/>
+                                                </li>
+                                                <li>
+                                                        <h3>События</h3>
+                                                        <span><img src="/gfx/rss.png" style="margin-right:0.5em"><a href="/export/events/?ind={{object.id}}">Все события</a></span><br/>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <!--[if !IE]> END DATA MESSAGES <![endif]-->
+		
+			<!--[if !IE]> START DAYS MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Статистика по дням за 1 неделю</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content pages"> 
+                    <table style="width:100%">
+                    <thead>
+                    <tr>
+<td style="text-align: left;width:50%">День</td>
+<td style="text-align: left;width:25%">Длительность недоступности</td>
+<td style="text-align: left;width:25%">Среднее время отклика (секунд)</td>
+</tr>
+<tbody>
+{% for v in object.getdays %}
+<tr>
+<td>{{v.theday}}</td><td>{{v.unavail_time|datediff}}</td><td>{{v.resp_time|timediff}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+				
+				</div> 
+			</div> 
+			<!--[if !IE]> END DAYS <![endif]-->  
+		
+			<!--[if !IE]> START PERIODS MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Периоды</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content pages"> 
+                    <table style="width:100%">
+                    <thead>
+                    <tr>
+<td style="text-align: left">Статус</td>
+<td style="text-align: left">Длительность</td>
+<td style="text-align: left">Начало периода</td>
+<td style="text-align: left">Конец периода</td>
+<td style="text-align: left">Среднее время отклика (секунд)</td>
+</tr>
+<tbody>
+{% for v in object.getperiods %}
+<tr>
+{% ifequal v.http_status 200 %}
+<td style="color:green">Работает</td>
+{% else %}
+<td style="color:red">Недоступен. Код {{v.http_status}}</td>
+{% endifequal %}
+<td>{{v.per_len|datediff}}</td><td>{{v.start_probe.probe_date}}</td><td>{{v.end_probe.probe_date}}</td><td>{{v.resp_time|timediff}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+				
+				</div> 
+			</div> 
+			<!--[if !IE]> END PERIOD <![endif]-->  
+
+			<!--[if !IE]> START EVENT MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>События</h2>					
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content"> 
+					<ul class="user"> 
+					    {% for v in object.getevents %}					    
+						<li> 
+						    {{v.event_date}}
+							<h3>{{v.title}}</h3> 
+							{{v.text}}
+						</li> 
+					    {% endfor %}
+					</ul> 
+				</div> 
+			</div> 
+			<!--[if !IE]> END EVENT MESSAGES <![endif]-->  
+
+
+			<!--[if !IE]> START PROBE MESSAGES <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Данные проб за сутки</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content pages"> 
+<table>
+<thead>
+<td style="text-align: left; width:50%;">Дата пробы</td>
+<td style="text-align: left; width:25%;">Время отклика (секунд)</td>
+<td style="text-align: left; width:25%;">HTTP статус</td>
+</thead>
+<tbody>
+{% for v in object.getvalues %}
+<tr>
+<td>{{v.probe_date}}</td><td>{{v.resp_time|timediff}}</td>
+{% ifequal v.http_status 200 %}
+<td style="color:green">OK. 200</td>
+{% else %}
+<td style="color:red">Недоступен. Код {{v.http_status}}</td>
+{% endifequal %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+				
+				
+				</div> 
+			</div> 
+			<!--[if !IE]> END PERIOD <![endif]-->  
+		
+			
+		
+		{% endblock %}

@@ -1,0 +1,48 @@
+.space {
+	display : block;
+	height : 19px;
+}
+
+#statics, table.statics{
+	position : relative;
+	display : none;
+	width : 660px !important;
+	width : 658px;
+}
+
+.flot-graph {
+	display : inline-block;
+	margin : 0;
+	padding : 0;
+	width : 660px;
+	height : 180px;
+}
+
+.flot-graph .xAxis {
+	line-height : 7px;
+}
+
+#caption {
+	float : right;
+	margin : -3px 2px 0 0;
+	font-size : 12px;
+	line-height : normal;
+	color : #1c1c1c;
+	font-weight : bold;
+}
+
+.flot-graph .legend {
+	line-height : 12px;
+}
+
+#tooltip {
+	background-color : #1c1c1c;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding : 0 8px;
+	color : #FFFFFF;
+	font-size : 11px;
+	line-height : 25px;
+	height: 25px;
+}

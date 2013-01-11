@@ -1,0 +1,39 @@
+{% extends "base2cols.html" %}
+{% load datediff %}
+		{% block content %}
+		
+				    		    
+			<!--[if !IE]> START INDICATORS <![endif]--> 
+			<div class="box"> 
+				<div class="title"> 
+					<h2>Индикаторы для сайта zakupki.gov.ru</h2> 
+					<img src="/gfx/title-hide.gif" class="toggle" alt="" /> 
+				</div> 
+				<div class="content pages"> 
+				
+					<table> 
+						<thead> 
+							<tr> 
+								<td width="30%" style="width:50%;">Название</td> 
+								<td style="width:25%">Время наблюдения</td> 
+								<td style="width:25%">Время недоступности</td> 
+							</tr>	
+						</thead> 
+						<tbody> 
+						{% for item in object_list %}
+							<tr> 
+								<td>
+								    <a href="/indicators/{{item.id}}/">{{item.name}}</a><br/>
+								</td> 
+								<td>{{item.watch_time|datediff}}</td> 
+								<td>{{item.inactive_time|datediff}}</td> 
+							</tr> 
+						{% endfor %}
+				      </tbody>
+			        </table>
+				</div> 
+			</div> 
+			<!--[if !IE]> END INDICATORS <![endif]-->  
+		
+		
+		{% endblock %}

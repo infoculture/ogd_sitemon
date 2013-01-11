@@ -1,0 +1,232 @@
+/*
+Template Name: DreamAdmin
+Author: Rory Kranendonk
+Author URI: http://www.dreamwire.nl
+Version: 1.0
+*/
+
+/* //////////////////// LAYOUT \\\\\\\\\\\\\\\\\\\\ */
+
+html, body {
+	margin : 0;
+	padding : 0;
+	background-image : url(/gfx/back-website.gif);
+	background-repeat : repeat;
+	height : 100%;
+}
+
+img {border : 0;}
+
+.wrapper {
+	float : left;
+	background-image : url(/gfx/back-gradient.gif);
+	background-repeat : repeat-x;
+	width : 100%;
+	min-height : 400px;
+}
+
+.top {
+	float : left;
+	padding : 80px 0 0;
+	width : 480px;
+	height : 48px;
+}
+
+.top .split{
+	float : left;
+	position : relative;
+	font-size : 11px;
+	font-weight : bold;
+	text-align : right;
+	line-height : normal;
+	width : 240px;
+	height : 48px;
+}
+
+.top .split h1{
+	float : left;
+	background-image : url(/gfx/logo.png);
+	background-repeat : no-repeat;
+	margin : 18px 0 0;
+	padding : 0;
+	font-size : 0;
+	line-height : 0;
+	text-align :  left;
+	color : #1c1c1c;
+	width : 132px;
+	height : 14px;
+}
+
+.container {
+	position : relative;
+	margin : 0 auto;
+	width : 482px;
+}
+
+.holder {
+	float : left;
+	background-color : #FFFFFF;
+	border-left : 1px solid #d3d3d3;
+	border-right : 1px solid #d3d3d3;
+	border-bottom : 1px solid #d3d3d3;
+	margin : -1px 0 0;
+	padding : 0 0 20px 0;
+	width : 480px;
+}
+
+.box {
+	float : left;
+	display : inline;
+	background-image : url(/gfx/title.gif);
+	background-position : left 1px;
+	background-repeat : repeat-x;
+	width : 480px;
+}
+
+.box .title {
+	position : relative;
+	background-image : url(/gfx/title-arrow.gif);
+	background-position : left top;
+	background-repeat : no-repeat;
+	border : 1px solid #d3d3d3;
+	-webkit-border-radius : 4px 4px 0 0;
+	-moz-border-radius : 4px 4px 0 0;
+	border-radius : 4px 4px 0 0;
+	padding : 0 0 0 43px;
+	height : 29px;
+}
+
+.box .title h2 {
+	float : left;
+}
+
+.box .content {
+	background-image : url(/gfx/content-shadow.gif);
+	background-position : left top;
+	background-repeat : repeat-x;
+	background-color : #fdfdfd;
+	border-left : 1px solid #d3d3d3;
+	border-right : 1px solid #d3d3d3;
+	border-bottom : 1px solid #d3d3d3;
+	padding : 20px 0 20px 20px;
+}
+
+.container .box .forms{
+	padding : 10px 20px;
+}
+
+.box .content .logged{
+	padding : 10px 0 0;
+}
+
+.box .content .logged label{
+	float : left;
+	padding : 7px 4px 0 0 !important;
+	padding : 11px 4px 0 0;
+	line-height : 1.05em;
+}
+
+.box .content .logged input.sb-select{
+	background-image : url(/gfx/select-actions.gif);
+	background-position : right top;
+	background-repeat : no-repeat;
+	background-color : transparent;
+	border : 1px solid #cdcdcd;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	z-index : 1;
+	margin : 3px 0 0 !important;
+	margin : 6px 0 0;
+	padding : 3px 17px 0 5px;
+	line-height : 1.05em;
+	cursor : pointer;
+	color : #656565;
+	font-weight : bold;
+	font-size : 11px;
+	text-decoration : none;
+	width : 62px;
+	height : 15px;
+}
+
+.box .content .logged .sb-dropdown {
+	top : 22px;
+	left : 5px;
+	width : 74px;
+}
+
+.box .content .logged .sb-dropdown a, .box .content .logged .sb-dropdown a:link, .box .content .logged .sb-dropdown a:active, .box .content .logged .sb-dropdown a:visited {
+	display : block;
+	background : none;
+	padding : 5px 10px;
+	overflow : hidden;
+	font-family : Arial;
+	cursor : pointer;
+	color: #1c1c1c;
+	font-size : 11px;
+	line-height : 14px;
+	text-decoration: none;
+	width : 100%;
+	height : 13px;
+}
+
+.box .content .logged .sb-dropdown a:hover {
+  background-color : #f7f7f7;
+}
+
+.box .half,
+.box .half-left{
+	float : left;
+	width : 216px;
+}
+
+.box .half-left{
+	padding : 0 4px 0 0;
+}
+
+.box .half-left input,
+.box .half input{
+	float : left;
+	width : 204px;
+}
+
+.box .content .buttons{
+	float : right;
+	padding : 0;
+	width : 77px;
+}
+
+.box .content .buttons button{
+	max-width : auto;
+}
+
+.box .content .buttons button span{
+	padding : 6px 15px 0;
+	line-height : 1.05;
+	height : 20px;
+}
+
+a.forgot, a.forgot:link, a.forgot:active, a.forgot:visited {
+	float : right;
+	background-image : url(/gfx/forgot.gif);
+	background-position : left top;
+	background-repeat : repeat-x;
+	border : 1px solid #2b2b2b;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	margin : 15px 0 0;
+	padding : 0 7px 0;
+	line-height : 1.64em;
+	font-size : 11px;
+	font-weight: bold;
+	color : #FFFFFF;
+	text-transform: uppercase;
+	text-decoration : none;
+	height : 18px;
+}
+
+a.forgot:hover  {
+	background-position : left bottom;
+	border : 1px solid #717171;
+}

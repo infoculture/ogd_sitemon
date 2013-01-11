@@ -1,0 +1,74 @@
+html,body{
+	font-family : Arial;
+	color : #656565;
+	font-size : 12px;
+	line-height : 18px;
+}
+
+a , a:link, a:active, a:visited {
+	text-decoration : underline;
+}
+
+a:hover {
+	color : #656565;
+	text-decoration : none;
+}
+
+ul{
+	margin : 0;
+	padding : 13px 0 0 15px;
+	list-style-type : none;
+}
+
+ol{
+	margin : 0;
+	padding : 13px 0 0 30px;
+}
+
+ol li{
+	margin : 5px 0 0;
+}
+
+ul li{
+	background-image : url(../gfx/li.gif);
+	background-position : left 6px;
+	background-repeat : no-repeat;
+	padding : 0 0 0 12px;
+	margin : 5px 0 0;
+}
+
+h1 {
+	margin : 0;
+	padding : 0 0 7px;
+	font-family: Arial;
+	font-weight : normal;
+	line-height : normal;
+	font-size : 17px;
+}
+
+h2 {
+	margin : 0;
+	padding : 0 0 7px;
+	font-family: Arial;
+	font-weight : normal;
+	line-height : normal;
+	font-size : 14px;
+}
+
+.box .title h2 {
+	margin : 0;
+	padding : 0;
+	font-family: Arial;
+	font-weight : bold;
+	line-height : 29px;
+	font-size : 12px;
+}
+
+h3{
+	margin : 0;
+	padding : 0 0 3px;
+	font-family: Arial;
+	font-weight : normal;
+	line-height : normal;
+	font-size : 12px;
+}

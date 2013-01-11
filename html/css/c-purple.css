@@ -1,0 +1,54 @@
+.menu ul li a, .menu ul li a:link, .menu ul li a:active, .menu ul li a:visited,
+.menu ul li.current li a, .menu ul li.current li a:link, .menu ul li.current li a:active, .menu ul li.current li a:visited,
+.menu ul li li a, .menu ul li li a:link, .menu ul li li a:active, .menu ul li li a:visited,
+.menu ul li li.current li a, .menu ul li li.current li a:link, .menu ul li li.current li a:active, .menu ul li li.current li a:visited,
+.box .pages td a , .box .pages td a:link, .box .pages td a:active, .box .pages td a:visited,
+.top .split div a , .top .split div a:link, .top .split div a:active, .top .split div a:visited {
+	color : #656565;
+}
+
+a , a:link, a:active, a:visited,
+.box .title h2,
+.menu ul li.current a, .menu ul li.current a:link, .menu ul li.current a:active, .menu ul li.current a:visited,
+.menu ul li:hover, .menu ul li.sfHover,
+.menu ul li a:focus, .menu ul li a:hover,
+.menu ul li li li.current a, .menu ul li li li.current a:link, .menu ul li li li.current a:active, .menu ul li li li.current a:visited,
+.menu ul li li.current li a:hover,
+.menu ul li.current li a:hover,
+.box .pages td a:hover, .top .split div a:hover{
+	color : #1c1c1c;
+}
+
+.menu ul li li a:focus, .menu ul li li a:hover,
+.menu ul li li.current a, .menu ul li li.current a:link, .menu ul li li.current a:active, .menu ul li li.current a:visited,
+h1, h2, h3, .box .content ul.user li h3 {
+	color : #8012b6;
+}
+
+.box .tabs .tabs .tabnav li a:hover, .box .tabs .tabnav li a:active, .box .tabs .tabnav li.ui-tabs-selected a {
+	color : #656565;
+}
+
+#statics, table.statics th {
+    background-color : #1c1c1c;
+}
+
+#statics, table.statics th.line{
+    background-color : #8012b6;
+}
+
+.row button span{
+	background-image : url(/gfx/purple/btn.gif);
+	border : 1px solid #8012b6;
+}
+
+.search button span,
+.box .pages button span {
+	background-image : url(/gfx/purple/btn-small.gif);
+	border : 1px solid #8012b6;
+}
+
+.box .row div.btn-upload {
+	background-image : url(/gfx/purple/upload.gif);
+	border : 1px solid #8012b6;
+}

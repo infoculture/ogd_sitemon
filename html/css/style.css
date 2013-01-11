@@ -1,0 +1,519 @@
+/*
+Template Name: DreamAdmin
+Author: Rory Kranendonk
+Author URI: http://www.dreamwire.nl
+Version: 1.0
+*/
+
+/* //////////////////// LAYOUT \\\\\\\\\\\\\\\\\\\\ */
+
+html, body {
+	margin : 0;
+	padding : 0;
+	background-image : url(/gfx/back-website.gif);
+	background-repeat : repeat;
+	height : 100%;
+}
+
+img {border : 0;}
+
+.wrapper {
+	float : left;
+	background-image : url(/gfx/back-gradient.gif);
+	background-repeat : repeat-x;
+	width : 100%;
+	min-height : 400px;
+}
+
+.container {
+	position : relative;
+	margin : 0 auto;
+	width : 982px;
+}
+
+.top {
+	float : left;
+	padding : 0 1px;
+	width : 980px;
+	height : 48px;
+}
+
+.top .split{
+	float : left;
+	position : relative;
+	font-size : 11px;
+	font-weight : bold;
+	text-align : right;
+	line-height : normal;
+	width : 490px;
+	height : 48px;
+}
+
+.top .split h1{
+	float : left;
+	background-image : url(/gfx/logo.png);
+	background-repeat : no-repeat;
+	margin : 18px 0 0;
+	padding : 0;
+	font-size : 0;
+	line-height : 0;
+	text-align :  left;
+	color : #1c1c1c;
+	width : 132px;
+	height : 14px;
+}
+
+.top .split div{
+	float : right;
+	border-right : 1px solid #656565;
+	margin : 18px 0 0 0;
+	padding : 0 10px 0 0;
+	line-height : 20px;
+}
+
+.top .split div a , .top .split div a:link, .top .split div a:active, .top .split div a:visited {
+	text-decoration : none;
+}
+
+.top .split div a:hover {
+	text-decoration : none;
+}
+
+.top .split div img{
+	margin : 0 6px 0 0;
+}
+
+.top .split div.logout{
+	border-right : none;
+	margin : 18px 0 0 10px;
+	padding : 0;
+	line-height : 20px;
+}
+
+.top .split div.logout img{
+	margin : 0 6px 0 0;
+}
+
+.menu {
+	float : left;
+	position : relative;
+	z-index : 1500;
+	background-image : url(/gfx/menu-back.gif);
+	background-repeat : repeat-x;
+	border : 1px solid #d3d3d3;
+	border-bottom : none;
+	-webkit-border-radius : 4px 4px 0 0;
+	-moz-border-radius : 4px 4px 0 0;
+	border-radius : 4px 4px 0 0;
+	width : 980px;
+	height : 32px;
+}
+
+.search {
+	position : absolute;
+	top : 5px;
+	right : 5px;
+}
+
+.search input {
+	float : left;
+	background-image : url(/gfx/input-back.gif);
+	background-repeat : repeat-x;
+	background-color : transparent;
+	border : 1px solid #cdcdcd;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	outline: none;
+	padding : 0 5px;
+	margin : 0;
+	font-size : 11px;
+	color : #1c1c1c;
+	line-height : 1.65em;
+	width : 131px;
+	height : 18px;
+}
+
+.search button,
+.box .pages button {
+	float : left;
+	background-repeat : repeat-x;
+	background-color : transparent;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	border : none;
+	outline : none;
+	padding : 0;
+	margin : 0 0 0 4px;
+	*margin :  -1px 0 0 4px;
+	font-family: Arial;
+	font-size: 11px;
+	font-weight: bold;
+	color : #FFFFFF;
+	text-transform: uppercase;
+	cursor : pointer;
+    overflow: visible;
+	width : auto;
+}
+
+.box .pages button {
+	margin :  0 0 0 4px;
+}
+
+@-moz-document url-prefix() { .box .pages button span{ margin :  -1px 0 0 0; } }
+@-moz-document url-prefix() { .search button{ margin :  -1px 0 0 2px; } } 
+
+.search button span,
+.box .pages button span{
+	float : left;
+	background-repeat : repeat-x;
+	background-color : transparent;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	padding : 0 7px;
+	line-height : 1.64em;
+}
+
+.search button:hover span,
+.box .pages button:hover span {
+	background-position : left bottom;
+	border : 1px solid #2b2b2b;
+}
+
+.holder {
+	float : left;
+	background-color : #FFFFFF;
+	border-left : 1px solid #d3d3d3;
+	border-right : 1px solid #d3d3d3;
+	border-bottom : 1px solid #d3d3d3;
+	margin : -1px 0 0;
+	padding : 0 0 20px 0;
+	width : 980px;
+}
+
+.box {
+	float : left;
+	display : inline;
+	background-image : url(/gfx/title.gif);
+	background-position : left 1px;
+	background-repeat : repeat-x;
+	margin : 20px 0 0 20px;
+	width : 940px;
+}
+
+.box.big,
+.box .big {
+	width : 700px;
+}
+
+.box.medium,
+.box .medium {
+	width : 460px;
+}
+
+.box.small,
+.box .small {
+	width : 220px;
+}
+
+.box .title {
+	position : relative;
+	background-image : url(/gfx/title-arrow.gif);
+	background-position : left top;
+	background-repeat : no-repeat;
+	border : 1px solid #d3d3d3;
+	-webkit-border-radius : 4px 4px 0 0;
+	-moz-border-radius : 4px 4px 0 0;
+	border-radius : 4px 4px 0 0;
+	padding : 0 0 0 43px;
+	height : 29px;
+}
+
+.box .title img {
+	position : absolute;
+	cursor : pointer;
+	top : 8px;
+	right : 8px;
+}
+
+.box .content {
+	background-image : url(/gfx/content-shadow.gif);
+	background-position : left top;
+	background-repeat : repeat-x;
+	background-color : #fdfdfd;
+	border-left : 1px solid #d3d3d3;
+	border-right : 1px solid #d3d3d3;
+	border-bottom : 1px solid #d3d3d3;
+	padding : 20px 20px 20px;
+}
+
+.box .content ul.user {
+	margin : 0;
+	padding : 0;
+	list-style-type : none;
+}
+
+.box .content ul.user li {
+	background-image : url(/gfx/line.gif);
+	background-position : left bottom;
+	background-repeat : repeat-x;
+	padding : 12px 0;
+	margin : 0;
+	width : 100%;
+}
+
+.box .content ul.user li h3{
+	margin : 0;
+	padding : 0 0 3px;
+	font-family: Arial;
+	font-weight : bold;
+	line-height : 14px;
+	font-size : 12px;
+}
+
+.box .pages, .box .pages table{
+	*zoom : 1;
+}
+
+.box .pages table {
+	border-top : 1px solid #dbdbdb;
+	margin : 0;
+	padding : 0;
+	border-collapse: collapse;
+	line-height : normal;
+	width : 100%;
+}
+
+.box .pages table thead{
+	font-weight : bold;
+	color : #1c1c1c
+}
+
+.box .pages td {
+	border-bottom : 1px solid #dbdbdb;
+	border-right : 1px solid #dbdbdb;
+	padding : 8px 20px;
+}
+
+.box .pages td a , .box .pages td a:link, .box .pages td a:active, .box .pages td a:visited, .box .pages td a:hover {
+	text-decoration : none;
+}
+
+.box .pages td img {
+	margin : 0 0 0 5px;
+}
+
+.pages-bottom {
+	display : inline-block;
+	padding : 5px 0 0;
+	width : 100%;
+}
+
+.actionbox {
+	float : left;
+	margin : 0 !important;
+	margin : -1px 0 0;
+}
+
+.actionbox .sb-custom {
+	float : left;
+	position : relative;
+	z-index : 1000;
+}
+
+.actionbox select {
+	display : none;
+}
+
+.actionbox select .no-js{
+	display : none;
+}
+
+.actionbox input.sb-select {
+	position: relative;
+	background-image : url(/gfx/select-actions.gif);
+	background-position : right top;
+	background-repeat : no-repeat;
+	background-color : transparent;
+	border : 1px solid #cdcdcd;
+	-webkit-border-radius : 4px;
+	-moz-border-radius : 4px;
+	border-radius : 4px;
+	top : 0;
+	left : 0;
+	z-index : 1;
+	padding : 3px 17px 3px 5px;
+	line-height : 12px;
+	cursor : pointer;
+	color : #656565;
+	font-weight : bold;
+	font-size : 11px;
+	text-decoration : none;
+	width : 62px;
+	height : 12px;
+}
+
+.actionbox .sb-dropdown {
+	position : absolute;
+	display : none;
+	background-color : #FFFFFF;
+	border : 1px solid #cdcdcd;
+	top : 19px;
+	left : 5px;
+	list-style-type : none;
+	overflow : hidden;
+	z-index : 2000;
+	margin : 0;
+	padding : 0;
+	width : 74px;
+}
+
+.actionbox .sb-dropdown li {
+	position : relative;
+	z-index : 999;
+	background : none;
+	padding : 0;
+	margin : 0;
+}
+
+.actionbox .sb-dropdown a, .actionbox .sb-dropdown a:link, .actionbox .sb-dropdown a:active, .actionbox .sb-dropdown a:visited {
+	display : block;
+	background : none;
+	padding : 5px 10px;
+	overflow : hidden;
+	font-family : Arial;
+	cursor : pointer;
+	color: #1c1c1c;
+	font-size : 11px;
+	line-height : 14px;
+	text-decoration: none;
+	width : 100%;
+	height : 13px;
+}
+
+.actionbox .sb-dropdown a:hover {
+  background-color : #f7f7f7;
+}
+
+.box .content .pagination {
+	float : right;
+	text-align : right;
+}
+
+.box .content .pagination a.left, .box .content .pagination a.left:link, .box .content .pagination a.left:active, .box .content .pagination a.left:visited{
+	background-image : url(/gfx/pagination-left.gif);
+	width : 18px;
+}
+
+.box .content .pagination a.left:hover{
+	background-position : right top;
+}
+
+.box .content .pagination a.right, .box .content .pagination a.right:link, .box .content .pagination a.right:active, .box .content .pagination a.right:visited, .box .content .pagination a.right:hover{
+	background: url(/gfx/pagination-right.gif);
+	width : 18px;
+}
+
+.box .content .pagination a.right:hover{
+	background-position : right top;
+}
+
+.box .content .pagination a, .box .content .pagination a:link, .box .content .pagination a:active, .box .content .pagination a:visited{
+	float : left;
+	background: url(/gfx/pagination.gif);
+	background-repeat : no-repeat;
+	font-size : 11px;
+	font-weight : bold;
+	line-height : 1.83em;
+	text-align : center;
+	margin : 0 0 0 3px;
+	padding : 0;
+	color : #656565;
+	text-decoration : none;
+	width : 23px;
+	height : 20px;
+}
+
+.box .content .pagination a:hover,
+.box .content .pagination a.active, .box .content .pagination a.active:link, .box .content .pagination a.active:active, .box .content .pagination a.active:visited, .box .content .pagination a.active:hover {
+	color : #1c1c1c;
+}
+
+.box .thumbs {
+	display : inline-block;
+	padding : 18px 6px 12px 18px;
+}
+
+.box .thumbs .thumb {
+	position : relative;
+	float : left;
+	font-size : 0;
+	line-height : 0;
+	margin : 0 6px 0 0;
+	width : 101px;
+	height : 107px;
+}
+
+.box .thumbs .thumb  img,
+.box  img.thumb {
+	display : inline-block;
+	background-image : url(/gfx/thumb.gif);
+	background-position : left top;
+	background-repeat : no-repeat;
+	padding : 4px;
+	width : 93px;
+	height : 93px;
+}
+
+.box  img.thumb {
+	margin : 0 0 0 15px;
+}
+
+.box .thumbs .thumb div {
+	position : absolute;
+	display : none;
+	background-image : url(/gfx/thumb-hover.gif);
+	background-position : left top;
+	background-repeat : no-repeat;
+	top : 4px;
+	right : 4px !important;
+	right : 3px;
+	z-index: 2;
+	height : 21px;
+	width : 21px;
+}
+
+.box .thumbs  .thumb div a, .box .thumbs  .thumb div a:link, .box .thumbs  .thumb div a:active, .box .thumbs  .thumb div a:visited, .box .thumbs  .thumb div a:hover {
+	display : inline-block;
+	height : 21px;
+	width : 21px;
+}
+
+.footer {
+	float : left;
+	padding : 13px 0 15px;
+	font-size : 11px;
+	color : #888888;
+	width : 980px;
+}
+
+.footer .split {
+	float : left;
+	width : 50%;
+}
+
+.footer a , .footer a:link, .footer a:active, .footer a:visited {
+	color : #888888;
+	text-decoration : underline;
+}
+
+.footer a:hover {
+	color : #1c1c1c;
+	text-decoration : none;
+}
+
+.footer .right {
+	text-align : right;
+}
